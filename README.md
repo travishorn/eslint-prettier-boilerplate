@@ -23,6 +23,20 @@ Since you are probably using this as a base for a new project, you probably also
 git remote remove origin
 ```
 
+You may also want to remove the git tags.
+
+For *nix, run
+
+```
+git tag | xargs -L 1 | xargs git tag --delete
+```
+
+For Windows, run
+
+```
+FOR /f "tokens=*" %a in ('git tag') DO git tag -d %a
+```
+
 ## Usage
 
 Start developing.
