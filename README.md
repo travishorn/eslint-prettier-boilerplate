@@ -73,6 +73,38 @@ when you save. Add the following to your Visual Studio Code settings.
 This setting only takes effect if  `files.autoSave` is set to `off`,
 `onFocusChange`, or `onWindowChange`.
 
+## Manual Setup (without using this repository)
+
+Initialize an npm package.
+
+```
+npm init -y
+```
+
+Install development dependencies
+
+```
+npm i -D eslint eslint-config-prettier eslint-plugin-prettier prettier
+```
+
+Create `.eslintrc.js` in project root.
+
+```
+module.exports = {
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  }
+};
+```
+
 ## License
 
 Copyright 2019 Travis Horn
