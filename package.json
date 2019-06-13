@@ -11,6 +11,10 @@
   "keywords": [],
   "author": "Travis Horn (https://travishorn.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travishorn/eslint-prettier-boilerplate"
+  },
   "devDependencies": {
     "eslint": "^5.15.3",
     "eslint-config-prettier": "^4.1.0",
