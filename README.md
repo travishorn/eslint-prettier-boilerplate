@@ -17,24 +17,18 @@ Install the dependencies.
 npm install
 ```
 
-Since you are probably using this as a base for a new project, you probably also want to remove the `origin` remote.
+Since you are probably using this as a base for a new project, you probably also want to remove the git history.
+
+On Linux/Mac:
 
 ```
-git remote remove origin
+rm -rf .git
 ```
 
-You may also want to remove the git tags.
-
-For *nix, run
+On Windows:
 
 ```
-git tag | xargs -L 1 | xargs git tag --delete
-```
-
-For Windows, run
-
-```
-FOR /f "tokens=*" %a in ('git tag') DO git tag -d %a
+rmdir /S .git
 ```
 
 ## Usage
@@ -59,7 +53,7 @@ npm run lint:fix
 If you're using Visual Studio Code, you can install the ESLint extension, which
 will automatically highlight warnings and errors using this boilerplate.
 
-1. Press **Ctrl + Shift + X** or click the **Extenstions** button
+1. Press **Ctrl + Shift + X** or click the **Extensions** button
 2. Search for **ESLint**
 3. Click the **Install** button next to the **ESLint** search result
 
