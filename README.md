@@ -5,10 +5,23 @@ and styles.
 
 ## Installation
 
-Clone the Git repository.
+### Via GitHub
+
+Click the green **Use this template** button above.
+
+Give your repository a name and click **Create repository from
+template**.
+
+Clone your new repository.
 
 ```
-git clone https://github.com/travishorn/eslint-prettier-boilerplate.git
+git clone https://github.com/[your username]/[your repo name].git
+```
+
+Change into the project directory.
+
+```
+cd [your repo name]
 ```
 
 Install the dependencies.
@@ -17,18 +30,36 @@ Install the dependencies.
 npm install
 ```
 
-Since you are probably using this as a base for a new project, you probably also want to remove the git history.
+### Manual (without using this repository)
 
-On Linux/Mac:
-
-```
-rm -rf .git
-```
-
-On Windows:
+Initialize an npm package.
 
 ```
-rmdir /S .git
+npm init -y
+```
+
+Install development dependencies
+
+```
+npm i -D eslint eslint-config-prettier eslint-plugin-prettier prettier
+```
+
+Create `.eslintrc.js` in project root.
+
+```
+module.exports = {
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8
+  }
+};
 ```
 
 ## Usage
@@ -66,38 +97,6 @@ when you save. Add the following to your Visual Studio Code settings.
 
 This setting only takes effect if  `files.autoSave` is set to `off`,
 `onFocusChange`, or `onWindowChange`.
-
-## Manual Setup (without using this repository)
-
-Initialize an npm package.
-
-```
-npm init -y
-```
-
-Install development dependencies
-
-```
-npm i -D eslint eslint-config-prettier eslint-plugin-prettier prettier
-```
-
-Create `.eslintrc.js` in project root.
-
-```
-module.exports = {
-  "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended"
-  ],
-  "env": {
-    "es6": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 8
-  }
-};
-```
 
 ## License
 
