@@ -32,35 +32,9 @@ npm install
 
 ### Manual (without using this repository)
 
-Initialize an npm package.
+Follow this instructions in this Gist:
 
-```
-npm init -y
-```
-
-Install development dependencies
-
-```
-npm i -D eslint eslint-config-prettier eslint-plugin-prettier prettier
-```
-
-Create `.eslintrc.js` in project root.
-
-```
-module.exports = {
-  "extends": [
-    "eslint:recommended",
-    "plugin:prettier/recommended"
-  ],
-  "env": {
-    "es6": true,
-    "node": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 8
-  }
-};
-```
+https://gist.github.com/travishorn/67d66ad896f31274c1c4c727c74992ea
 
 ## Usage
 
@@ -100,7 +74,7 @@ This setting only takes effect if  `files.autoSave` is set to `off`,
 
 ## License
 
-Copyright 2019 Travis Horn
+Copyright 2021 Travis Horn
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
